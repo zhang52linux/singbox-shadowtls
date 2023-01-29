@@ -112,8 +112,8 @@ install_singbox(){
         red "Sing-box 安装失败"
     elif [[ -n $(service sing-box status 2>/dev/null | grep "active") ]]; then
         green "Sing-box 安装成功"
-        yellow "客户端Socks / HTTP代理模式配置文件已保存到 /root/sing-box/client-sockshttp.json"
-        yellow "客户端TUN模式配置文件已保存到 /root/sing-box/client-tun.json"
+        yellow "客户端Socks / HTTP代理模式配置文件已保存到 /root/sing-box/client-sockshttp.json 请自行下载到本地使用"
+        yellow "客户端TUN模式配置文件已保存到 /root/sing-box/client-tun.json 请自行下载到本地使用"
     fi
 }
 
