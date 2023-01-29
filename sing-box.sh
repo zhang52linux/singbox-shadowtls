@@ -19,7 +19,7 @@ yellow(){
     echo -e "\033[33m\033[01m$1\033[0m"
 }
 
-password=$(openssl rand -base64 16)
+ps=$(openssl rand -base64 16)
 
 # 判断系统及定义系统安装依赖方式
 REGEX=("debian" "ubuntu" "centos|red hat|kernel|oracle linux|alma|rocky" "'amazon linux'" "fedora")
@@ -100,9 +100,9 @@ install_singbox(){
         sed -i "s/填写服务器ip地址/[${v6}]/g" /root/sing-box/client-tun.json
     fi
     
-    sed -i "s/填写自定义密码/${password}/g" /root/sing-box/server-config.json
-    sed -i "s/填写自定义密码/${password}/g" /root/sing-box/client-sockshttp.json
-    sed -i "s/填写自定义密码/${password}/g" /root/sing-box/client-tun.json
+    sed -i "s/填写自定义密码/${ps}/g" /root/sing-box/server-config.json
+    sed -i "s/填写自定义密码/${ps}/g" /root/sing-box/client-sockshttp.json
+    sed -i "s/填写自定义密码/${ps}/g" /root/sing-box/client-tun.json
 
     
     systemctl start sing-box
