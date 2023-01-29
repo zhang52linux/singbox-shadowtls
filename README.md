@@ -22,5 +22,6 @@ GNU Affero General Public License v3.0
 ## 感谢
 
 项目原作：https://github.com/SagerNet/sing-box
+
 https://github.com/blog-misaka/singbox-shadowtls
 
