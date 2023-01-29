@@ -70,11 +70,11 @@ install_singbox(){
     fi
 
     rm -f /etc/sing-box/config.json
-    wget --no-check-certificate -O /etc/sing-box/config.json https://gitlab.com/misakablog/singbox-shadowtls/-/raw/main/configs/server-config.json
+    wget --no-check-certificate -O /etc/sing-box/config.json https://raw.githubusercontent.com/lanhebe/singbox-shadowtls/main/configs/server-config.json
     
     mkdir /root/sing-box
-    wget --no-check-certificate -O /root/sing-box/client-sockshttp.json https://gitlab.com/misakablog/singbox-shadowtls/-/raw/main/configs/client-sockshttp.json
-    wget --no-check-certificate -O /root/sing-box/client-tun.json https://gitlab.com/misakablog/singbox-shadowtls/-/raw/main/configs/client-tun.json
+    wget --no-check-certificate -O /root/sing-box/client-sockshttp.json https://raw.githubusercontent.com/lanhebe/singbox-shadowtls/main/configs/client-sockshttp.json
+    wget --no-check-certificate -O /root/sing-box/client-tun.json https://raw.githubusercontent.com/lanhebe/singbox-shadowtls/main/configs/client-tun.json
     
     wgcfv6status=$(curl -s6m8 https://www.cloudflare.com/cdn-cgi/trace -k | grep warp | cut -d= -f2) 
     wgcfv4status=$(curl -s4m8 https://www.cloudflare.com/cdn-cgi/trace -k | grep warp | cut -d= -f2)
@@ -114,6 +114,7 @@ uninstall_singbox(){
     systemctl stop sing-box
     systemctl disable sing-box
     rm -rf /root/sing-box
+    rm -rf /etc/sing-box/config.json
     ${PACKAGE_UNINSTALL} sing-box
     green "Sing-box 已彻底卸载完成"
 }
@@ -137,13 +138,11 @@ menu(){
     clear
     echo "#############################################################"
     echo -e "#              ${RED} Sing-box+ShadowTLS  一键管理脚本${PLAIN}            #"
-    echo -e "# ${GREEN}作者${PLAIN}: MisakaNo の 小破站                                  #"
-    echo -e "# ${GREEN}博客${PLAIN}: https://blog.misaka.rest                            #"
-    echo -e "# ${GREEN}GitHub 项目${PLAIN}: https://github.com/blog-misaka               #"
-    echo -e "# ${GREEN}GitLab 项目${PLAIN}: https://gitlab.com/misakablog                #"
-    echo -e "# ${GREEN}Telegram 频道${PLAIN}: https://t.me/misakablogchannel             #"
-    echo -e "# ${GREEN}Telegram 群组${PLAIN}: https://t.me/+CLhpemKhaC8wZGIx             #"
-    echo -e "# ${GREEN}YouTube 频道${PLAIN}: https://www.youtube.com/@misaka-blog        #"
+    echo -e "# ${GREEN}作者${PLAIN}: MisakaNo & Littleyu修改                                  #"
+    echo -e "# ${YELLOW}脚本适用于"Ubuntu" "CentOS" "CentOS" "Fedora"    #"
+    echo -e "# ${GREEN}博客${PLAIN}: https://www.yugogo.xyz                            #"
+    echo -e "# ${GREEN}GitHub 项目${PLAIN}: https://github.com/lanhebe/singbox-shadowtls               #"
+    echo -e "# ${GREEN}YouTube 频道${PLAIN}: https://www.youtube.com/@yulittle6079        #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 安装 Sing-box"
