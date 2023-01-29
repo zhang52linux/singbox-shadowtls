@@ -1,5 +1,5 @@
 # Sing-box + ShadowTLS 一键管理脚本
-
+本脚本来源于blog-misaka/singbox-shadowtls修改，目的是变得可用。
 ```shell
 wget -N --no-check-certificate https://raw.githubusercontent.com/lanhebe/singbox-shadowtls/main/sing-box.sh && bash sing-box.sh
  && bash sing-box.sh
