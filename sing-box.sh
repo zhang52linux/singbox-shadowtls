@@ -100,7 +100,7 @@ install_singbox(){
         sed -i "s/填写服务器ip地址/[${v6}]/g" /root/sing-box/client-tun.json
     fi
     
-    sed -i "s/填写自定义密码/${ps}/g" /root/sing-box/server-config.json
+    sed -i "s/填写自定义密码/${ps}/g" /etc/sing-box/config.json
     sed -i "s/填写自定义密码/${ps}/g" /root/sing-box/client-sockshttp.json
     sed -i "s/填写自定义密码/${ps}/g" /root/sing-box/client-tun.json
 
