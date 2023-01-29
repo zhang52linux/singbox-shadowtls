@@ -31,7 +31,7 @@
     {
       "type": "shadowsocks",
       "method": "2022-blake3-aes-128-gcm",
-      "password": "8JCsPssfgS8tiRwiMlhARg==",
+      "password": "填写自定义密码",
       "detour": "shadowtls-out",
       "multiplex": {
         "enabled": true,
