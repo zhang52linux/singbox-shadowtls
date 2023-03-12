@@ -144,12 +144,8 @@ restart_singbox(){
 menu(){
     clear
     echo "#############################################################"
-    echo -e "#              ${RED} Sing-box+ShadowTLS  一键管理脚本${PLAIN}            #"
-    echo -e "# ${GREEN}作者${PLAIN}: MisakaNo & Littleyu修改                                  #"
-    echo -e "# ${YELLOW}脚本适用于"Ubuntu" "CentOS" "CentOS" "Fedora"    #"
-    echo -e "# ${GREEN}博客${PLAIN}: https://www.yugogo.xyz                            #"
-    echo -e "# ${GREEN}GitHub 项目${PLAIN}: https://github.com/lanhebe/singbox-shadowtls               #"
-    echo -e "# ${GREEN}YouTube 频道${PLAIN}: https://www.youtube.com/@yulittle6079        #"
+    echo -e "# ${RED} Sing-box+ShadowTLS  一键管理脚本${PLAIN}                         #"
+    echo -e "# ${YELLOW} 脚本适用于"Ubuntu" "CentOS" "CentOS" "Fedora" ${PLAIN}                   #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 安装 Sing-box"
